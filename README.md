@@ -1,4 +1,5 @@
-![alt text](https://raw.githubusercontent.com/maukaim/MOULA-Project/master/moula-logo.png) 
+<img alt="alt text" height="82.23" src="https://raw.githubusercontent.com/maukaim/MOULA-Project/master/moula-logo.png" width="240"/>
+
 # Moula Market Connector
 __________________________________________ 
 

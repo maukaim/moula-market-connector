@@ -1,4 +1,4 @@
-![alt text](https://raw.githubusercontent.com/maukaim/MOULA-Project/master/moula-logo.svg) 
+![alt text](https://raw.githubusercontent.com/maukaim/MOULA-Project/master/moula-logo.png) 
 # Moula Market Connector
 __________________________________________ 
 

@@ -1,4 +1,5 @@
-# Moula Market Connector    
+![alt text](https://raw.githubusercontent.com/maukaim/MOULA-Project/master/moula-logo.svg) 
+# Moula Market Connector
 __________________________________________ 
 
 ## Purpose of this micro-service  

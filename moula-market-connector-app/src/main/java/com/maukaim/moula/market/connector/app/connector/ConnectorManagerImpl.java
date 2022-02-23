@@ -46,6 +46,7 @@ public class ConnectorManagerImpl implements ConnectorManager {
                     Duration.of(5, ChronoUnit.MINUTES).toMillis(),
                     "OK");
         }
+
         throw new ExchangeNotSupported(exchange);
     }
 

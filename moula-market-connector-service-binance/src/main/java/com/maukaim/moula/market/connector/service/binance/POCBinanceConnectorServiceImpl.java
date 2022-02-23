@@ -28,7 +28,7 @@ public class POCBinanceConnectorServiceImpl implements BinanceConnectorService {
         @Override
         public void onMessage(@NotNull WebSocket webSocket, @NotNull String text) {
             super.onMessage(webSocket, text);
-//            System.out.println(text);
+            System.out.println(text);
         }
     }
 }

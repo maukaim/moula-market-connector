@@ -5,7 +5,6 @@ import com.maukaim.moula.market.connector.api.Exchange;
 import com.maukaim.moula.market.connector.app.connector.ConnectorManager;
 import com.maukaim.moula.market.connector.app.connector.model.DataRequest;
 import com.maukaim.moula.market.connector.app.connector.model.DataType;
-import org.apache.commons.lang3.builder.ToStringStyle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,8 +25,8 @@ public class MarketConnectorController {
 
     @GetMapping(value = "/request")
     public ResponseEntity<ConnectReport> request(@RequestParam Exchange exchange,
-                                                   @RequestParam String symbol,
-                                                   @RequestParam DataType dataType) {
+                                                 @RequestParam String symbol,
+                                                 @RequestParam DataType dataType) {
         DataRequest request = new DataRequest(exchange, symbol, dataType);
         try {
             return ResponseEntity.ok(this.connectorManager.request(request));

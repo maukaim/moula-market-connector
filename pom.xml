@@ -10,6 +10,7 @@
     <version>${revision}</version>
     <properties>
         <revision>1.0-SNAPSHOT</revision>
+        <spring.boot.version>2.4.4</spring.boot.version>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
     </properties>
@@ -18,6 +19,7 @@
         <module>moula-market-connector-app</module>
         <module>moula-market-connector-service-binance</module>
         <module>moula-market-connector-api</module>
+        <module>moula-market-connector-web-api-swagger</module>
     </modules>
 
 </project>

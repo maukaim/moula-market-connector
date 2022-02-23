@@ -13,9 +13,5 @@ public class MainApplication {
     public static void main(String[] args) throws InterruptedException, IOException {
         SpringApplication.run(MainApplication.class, args);
         System.out.println(HelloWorldAdapter.enrichFriendly(HelloWorldConfig.ENGLISH));
-
-//        ConnectorManager manager = ConnectorManagerConfig.getManager();
-//        DataRequest request = new DataRequest(Exchange.BINANCE, "btcusdt", DataType.DEPTH);
-//        ConnectReport request1 = manager.request(request);
     }
 }

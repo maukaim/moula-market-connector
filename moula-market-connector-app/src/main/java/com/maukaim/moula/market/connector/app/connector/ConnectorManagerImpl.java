@@ -7,20 +7,31 @@ import com.maukaim.moula.market.connector.app.connector.exceptions.DataTypeNotSu
 import com.maukaim.moula.market.connector.app.connector.exceptions.ExchangeNotSupported;
 import com.maukaim.moula.market.connector.app.connector.model.DataRequest;
 import com.maukaim.moula.market.connector.app.connector.model.DataType;
-import org.apache.commons.lang3.builder.ToStringStyle;
+import org.springframework.beans.BeanInstantiationException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.NonNull;
+import org.springframework.lang.NonNullFields;
+import org.springframework.stereotype.Service;
 
 import java.io.Closeable;
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 
+@Service
 public class ConnectorManagerImpl implements ConnectorManager {
 
     private final Map<Exchange, ConnectorService> connectorServiceMap;
 
-    public ConnectorManagerImpl(Map<Exchange, ConnectorService> connectorServiceMap) {
-        this.connectorServiceMap = connectorServiceMap;
+    @Autowired
+    public ConnectorManagerImpl(List<ConnectorService> connectorServiceList) {
+        this.connectorServiceMap =connectorServiceList.stream()
+                .collect(Collectors
+                        .toMap(ConnectorService::getSupportedExchange, co-> co));
+        System.out.println(this.connectorServiceMap);
     }
 
 

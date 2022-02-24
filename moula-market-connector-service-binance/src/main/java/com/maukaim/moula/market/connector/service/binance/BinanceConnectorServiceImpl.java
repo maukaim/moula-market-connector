@@ -18,7 +18,7 @@ public class BinanceConnectorServiceImpl implements BinanceConnectorService {
 
 
     @Override
-    public Closeable subOrderBook(String currPair) {
+    public Closeable subOrderBookUpdates(String currPair) {
         Request request = new Request.Builder().url(BinanceConfig.getConnectUrl(currPair,"depth")).build();
         BinanceApiCallback<DepthEvent> callback = new BinanceApiCallback<DepthEvent>() {
             @Override

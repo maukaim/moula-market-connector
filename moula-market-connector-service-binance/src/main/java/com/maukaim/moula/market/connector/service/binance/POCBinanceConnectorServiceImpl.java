@@ -11,7 +11,7 @@ import java.io.Closeable;
 
 public class POCBinanceConnectorServiceImpl implements BinanceConnectorService {
     @Override
-    public Closeable subOrderBook(String currPair) {
+    public Closeable subOrderBookUpdates(String currPair) {
 
         Request request = new Request.Builder().url(BinanceConfig.getConnectUrl(currPair, "depth")).build();
         WebSocketListener wsListener = new MoulaWebSocketListener();

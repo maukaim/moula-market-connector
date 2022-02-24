@@ -1,6 +1,4 @@
-package com.maukaim.moula.market.connector.app.connector.exceptions;
-
-import com.maukaim.moula.market.connector.api.Exchange;
+package com.maukaim.moula.market.connector.app.request.exceptions;
 
 public class DataTypeNotSupported extends RuntimeException{
     public DataTypeNotSupported(String msg){

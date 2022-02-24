@@ -1,4 +1,4 @@
-package com.maukaim.moula.market.connector.app.connector.model;
+package com.maukaim.moula.market.connector.app.request.model;
 
 import com.maukaim.moula.market.connector.api.Exchange;
 

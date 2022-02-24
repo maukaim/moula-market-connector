@@ -1,4 +1,4 @@
-package com.maukaim.moula.market.connector.app.connector.exceptions;
+package com.maukaim.moula.market.connector.app.request.exceptions;
 
 import com.maukaim.moula.market.connector.api.Exchange;
 

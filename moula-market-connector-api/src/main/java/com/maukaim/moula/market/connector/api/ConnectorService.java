@@ -28,4 +28,8 @@ public abstract class ConnectorService {
     public long getTimeOutLimit(){
         return Duration.of(10, ChronoUnit.SECONDS).toMillis();
     }
+
+    public void publish(String data){
+        this.dataPublisher.publish(data);
+    }
 }

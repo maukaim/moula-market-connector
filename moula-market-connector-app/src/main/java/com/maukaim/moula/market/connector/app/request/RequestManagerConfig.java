@@ -14,7 +14,7 @@ public class RequestManagerConfig {
         return new POCBinanceConnectorServiceImpl(new DataPublisher() {
             @Override
             public void publish(String data) {
-
+                System.out.println("hehe " + data);
             }
         });
     }

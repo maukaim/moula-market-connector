@@ -29,12 +29,12 @@ public class POCBinanceConnectorServiceImpl extends BinanceConnectorService {
         };
     }
 
-    private static class MoulaWebSocketListener extends okhttp3.WebSocketListener {
+    private class MoulaWebSocketListener extends okhttp3.WebSocketListener {
 
         @Override
         public void onMessage(@NotNull WebSocket webSocket, @NotNull String text) {
             super.onMessage(webSocket, text);
-            System.out.println(Thread.currentThread().getId() + " " + text);
+            publish(text);
         }
     }
 }

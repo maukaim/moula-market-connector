@@ -1,5 +1,6 @@
 package com.maukaim.moula.market.connector.service.binance;
 
+import com.maukaim.moula.market.connector.api.DataPublisher;
 import com.maukaim.moula.market.connector.service.binance.config.BinanceConfig;
 import com.maukaim.moula.market.connector.service.binance.config.OkHttp3Config;
 import okhttp3.Request;
@@ -9,7 +10,12 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.Closeable;
 
-public class POCBinanceConnectorServiceImpl implements BinanceConnectorService {
+public class POCBinanceConnectorServiceImpl extends BinanceConnectorService {
+
+    public POCBinanceConnectorServiceImpl(DataPublisher publisher) {
+        super(publisher);
+    }
+
     @Override
     public Closeable subOrderBookUpdates(String currPair) {
 
@@ -28,7 +34,7 @@ public class POCBinanceConnectorServiceImpl implements BinanceConnectorService {
         @Override
         public void onMessage(@NotNull WebSocket webSocket, @NotNull String text) {
             super.onMessage(webSocket, text);
-            System.out.println(text);
+            System.out.println(Thread.currentThread().getId() + " " + text);
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.maukaim.moula.market.connector.service.binance;
 
+import com.maukaim.moula.market.connector.api.DataPublisher;
 import com.maukaim.moula.market.connector.service.binance.config.BinanceConfig;
 import com.maukaim.moula.market.connector.service.binance.config.OkHttp3Config;
 import com.maukaim.moula.market.connector.service.binance.websocket.BinanceApiCallback;
@@ -12,9 +13,13 @@ import java.io.Closeable;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Consumer;
 
-public class BinanceConnectorServiceImpl implements BinanceConnectorService {
+public class BinanceConnectorServiceImpl extends BinanceConnectorService {
 
     private final WsCallback wsCallback = new WsCallback();
+
+    public BinanceConnectorServiceImpl(DataPublisher publisher) {
+        super(publisher);
+    }
 
 
     @Override

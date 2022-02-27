@@ -1,11 +1,16 @@
 package com.maukaim.moula.market.connector.service.binance;
 
 import com.maukaim.moula.market.connector.api.ConnectorService;
+import com.maukaim.moula.market.connector.api.DataPublisher;
 import com.maukaim.moula.market.connector.api.Exchange;
 
-public interface BinanceConnectorService extends ConnectorService {
+public abstract class BinanceConnectorService extends ConnectorService {
+    public BinanceConnectorService(DataPublisher publisher) {
+        super(publisher);
+    }
+
     @Override
-    default Exchange getSupportedExchange() {
+    public Exchange getSupportedExchange() {
         return Exchange.BINANCE;
     }
 }

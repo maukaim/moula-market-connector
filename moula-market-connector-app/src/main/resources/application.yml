@@ -4,3 +4,7 @@ server:
 maukaim:
   swagger:
     enabled: true
+
+kafka:
+  bootstrapAddress: localhost:9092
+  

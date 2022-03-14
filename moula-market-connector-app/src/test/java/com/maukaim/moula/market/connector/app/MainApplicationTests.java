@@ -1,6 +1,7 @@
 package com.maukaim.moula.market.connector.app;
 
 import org.apache.kafka.clients.producer.*;
+import org.apache.kafka.common.protocol.types.Schema;
 import org.apache.kafka.common.serialization.LongSerializer;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.junit.Test;
@@ -24,6 +25,7 @@ public class MainApplicationTests {
         System.out.println(recordMetadata);
         producer.flush();
         producer.close();
+        
     }
 
     private static Producer<Long, String> createProducer() {
